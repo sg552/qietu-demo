@@ -1,0 +1,308 @@
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
+    <link rel="stylesheet" href="./static/css/tuling_h5.css">
+    <title>Demo</title> <style>
+
+.home_left_title{font-size:17px;color:white;font-weight:bold
+}
+.home_right_title{font-size:16px;color:white
+}
+.home_container{padding-top:46px;box-sizing:border-box;height:100%;overflow:auto;-webkit-overflow-scrolling:touch
+}
+.fu_li_zhuan_qu{margin-bottom:5px;background-color:white;height:110px;position:relative
+}
+.fu_li_zhuan_qu .logo_image{width:90px;height:90px;position:absolute;left:15px;top:0;bottom:0;margin:auto
+}
+.fu_li_zhuan_qu .content{margin-left:120px;margin-right:15px;position:relative;color:#434343;letter-spacing:.5px;font-family:'PingFangSC Regular';font-size:16px;text-align:left;top:20px;height:70px;text-overflow:ellipsis;overflow:hidden
+}
+.fu_li_zhuan_qu .you_hui_xin_xi_content{max-height:70px;text-overflow:ellipsis;overflow:hidden;display:table-cell;vertical-align:middle
+}
+.fu_li_zhuan_qu .content .title{overflow:hidden;height:48px;display:-webkit-box;line-height:24px;-webkit-line-clamp:2
+}
+.fu_li_zhuan_qu .logo_and_shop_name{height:21px
+}
+.fu_li_zhuan_qu .logo_and_shop_name span{font-size:13px;line-height:23px;color:#919191;vertical-align:top
+}
+.fu_li_zhuan_qu img{border:1px solid #e2e2e2;border-radius:9.5px;width:19px;height:19px
+}
+.cheng_shi_gong_lue{margin-left:15px;margin-right:15px;margin-top:10px;background:#eeeeee
+}
+.cheng_shi_gong_lue_cell{background-color:white;border-radius:5px;border:1px solid #e0e0e0;margin-bottom:10px;padding:15px
+}
+.cheng_shi_gong_lue_cell img{width:100%;display:block
+}
+.cheng_shi_gong_lue_cell .title{color:#434343;letter-spacing:.5px;font-family:'PingFangSC Regular';font-size:16px;line-height:20px;text-align:left;margin-top:10px;overflow:hidden
+}
+.choose_city_header{line-height:17px;padding:29px 0 23px 0;background:#fff;font-size:17px;position:relative;font-weight:bold;border-radius:5px 5px 0 0
+}
+.choose_city_header:after{position:absolute;content:" ";left:0;bottom:0;height:1px;width:100%;border-bottom:1px solid #c6c6c6
+}
+
+
+
+
+
+.modal-mask {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    display: table;
+    transition: opacity .3s ease;
+}
+.modal-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+.modal-container {
+    width: 80%;
+    margin: 0px auto;
+  /*  background-color: #fff;*/
+    border-radius: 2px;
+    height: 370px;
+/*    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);*/
+    transition: all .3s ease;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.modal-header h3 {
+    margin-top: 0;
+    color: #42b983;
+}
+.modal-body {
+  /*  margin: 10px 0;*/
+}
+.modal-default-button {
+    float: right;
+}
+
+  /*
+   * The following styles are auto-applied to elements with
+   * transition="modal" when their visibility is toggled
+   * by Vue.js.
+   *
+   * You can easily play with the modal transition by editing
+   * these styles.
+   */
+.modal-enter {
+    opacity: 0;
+}
+.modal-leave-active {
+    opacity: 0;
+}
+.modal-enter .modal-container,
+  .modal-leave-active .modal-container {
+    transform: scale(1.1);
+}
+
+
+
+    </style>
+    <link href="/static/css/app.f7a07bdb3eae33ab0b47f44352bb8974.css" rel="stylesheet"></head>
+
+  <body>
+    <div id="app" style="height: 100%;">
+      <div class="weui_tab">
+        <div class="vux-fix-safari-overflow-scrolling weui_tab_bd weui_tab_bd">
+          <div class="full_height">
+            <div class="vux-demo-header-box" style='    z-index: 100;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;'>
+              <div class="vux-header green_header" style='    position: relative;
+    padding: 3px 0;
+    box-sizing: border-box;background: #017e44;'>
+                <div class="vux-header-left" style='    position: absolute;
+    top: 14px;
+    display: block;
+    font-size: 14px;
+    line-height: 21px;
+    color: #ccc;left:18px'>
+                  <p class="home_left_title" style='    font-size: 17px;
+    color: #fff;
+    font-weight: 700;'>优惠信息</p></div>
+                <h1 class="vux-header-title" style='height:40px;
+    margin: 0 88px;
+    margin-left: 100px;
+    line-height: 40px;
+    text-align: center;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 400;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #fff;
+
+'>
+                  <span style="display: none;"></span>
+                </h1>
+                <div class="vux-header-right" style="color: rgb(0, 0, 0);
+    position: absolute;
+    top: 14px;
+    display: block;
+    font-size: 14px;
+    line-height: 21px;right:15px">
+                  <div>
+                    <img src="http://siweitech.b0.upaiyun.com/image/shangyunyijia/定位@2x.png"
+style='    height: 19px;
+    vertical-align: middle;
+    line-height: inherit;
+    position: relative;
+    bottom: 3px;'>
+                    <span class="home_right_title" style='    font-size: 16px;
+    color: #fff;'>北京</span></div>
+                </div>
+              </div>
+            </div>
+            <p style="display: none;">北京</p>
+            <div class="home_container">
+                      <div class="vux-img" style="background-image: url(&quot;http://tulingfiles.b0.upaiyun.com/upload/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20170703115543771654.jpg&quot;);
+display: block;
+    width: 100%;
+    height: 144px;
+    background-position: 50% no-repeat;
+    background-size: cover;
+"></div>
+
+              <span class="divider"></span>
+              <div class="fu_li_zhuan_qu">
+                <img src="http://tulingfiles.b0.upaiyun.com/upload/img/1215658.jpg" class="logo_image">
+                <div class="content" style="display: table;">
+                  <div class="you_hui_xin_xi_content">
+                    <div style="display: inline-block; max-height: 70px; overflow: hidden;">酷浪|为啥外国人都喜欢光顾这家咖啡店？</div></div>
+                </div>
+              </div>
+              <div class="fu_li_zhuan_qu">
+                <img src="http://tulingfiles.b0.upaiyun.com/upload/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20170623175717718947.jpg" class="logo_image">
+                <div class="content" style="display: table;">
+                  <div class="you_hui_xin_xi_content">
+                    <div style="display: inline-block; max-height: 70px; overflow: hidden;">麻辣诱惑|招牌龙虾 满减共享！</div></div>
+                </div>
+              </div>
+              <div class="fu_li_zhuan_qu">
+                <img src="http://tulingfiles.b0.upaiyun.com/upload/img/%E5%BA%A6%E5%B0%8F%E6%9C%88787728.png" class="logo_image">
+                <div class="content" style="display: table;">
+                  <div class="you_hui_xin_xi_content">
+                    <div style="display: inline-block; max-height: 70px; overflow: hidden;">度小月|没吃够？度小月送你特色甜点小食最后解解馋</div></div>
+                </div>
+              </div>
+              <div class="fu_li_zhuan_qu">
+                <img src="http://tulingfiles.b0.upaiyun.com/upload/img/%E7%8E%AF%E7%90%83%E6%BC%AB%E6%B8%B8-%E6%96%B0328166.png" class="logo_image">
+                <div class="content" style="display: table;">
+                  <div class="you_hui_xin_xi_content">
+                    <div style="display: inline-block; max-height: 70px; overflow: hidden;">环球漫游|0元wifi随身享，漫游全球不掉线</div></div>
+                </div>
+              </div>
+              <div class="fu_li_zhuan_qu">
+                <img src="http://tulingfiles.b0.upaiyun.com/upload/img/%E6%97%A5%E4%B8%8A%E5%85%8D%E7%A8%8E%E5%BA%97logo970091.jpg" class="logo_image">
+                <div class="content" style="display: table;">
+                  <div class="you_hui_xin_xi_content">
+                    <div style="display: inline-block; max-height: 70px; overflow: hidden;">日上免税店（北京）|你去【网上预订】平台冲浪了吗？</div></div>
+                </div>
+              </div>
+              <div class="fu_li_zhuan_qu">
+                <img src="http://tulingfiles.b0.upaiyun.com/upload/img/%E5%BA%B7%E4%BB%94%E5%B0%81%E9%9D%A2805296.png" class="logo_image">
+                <div class="content" style="display: table;">
+                  <div class="you_hui_xin_xi_content">
+                    <div style="display: inline-block; max-height: 70px; overflow: hidden;">康仔餐饮|新店开业，消费即送冰淇淋，更多新品4元起</div></div>
+                </div>
+              </div>
+              <div class="fu_li_zhuan_qu">
+                <img src="http://tulingfiles.b0.upaiyun.com/upload/img/%E7%BF%A1%E7%BF%A0%E5%B0%8F%E5%8E%A8292651.png" class="logo_image">
+                <div class="content" style="display: table;">
+                  <div class="you_hui_xin_xi_content">
+                    <div style="display: inline-block; max-height: 70px; overflow: hidden;">翡翠小厨 |甜品果饮 多重优惠 尽在翡翠小厨</div></div>
+                </div>
+              </div>
+              <div class="fu_li_zhuan_qu">
+                <img src="http://tulingfiles.b0.upaiyun.com/upload/img/%E6%8A%A4%E5%9B%BD%E5%AF%BA%E5%B0%8F%E5%90%83913068.png" class="logo_image">
+                <div class="content" style="display: table;">
+                  <div class="you_hui_xin_xi_content">
+                    <div style="display: inline-block; max-height: 70px; overflow: hidden;">护国寺小吃|护国寺带你畅享清凉一夏，请你喝汤</div></div>
+                </div>
+              </div>
+              <div class="fu_li_zhuan_qu">
+                <img src="http://tulingfiles.b0.upaiyun.com/upload/img/%E7%A5%9E%E5%B7%9E%E7%A7%9F%E8%BD%A6424180.png" class="logo_image">
+                <div class="content" style="display: table;">
+                  <div class="you_hui_xin_xi_content">
+                    <div style="display: inline-block; max-height: 70px; overflow: hidden;">神州租车|便捷舒适的旅途，从一台车开始</div></div>
+                </div>
+              </div>
+              <div class="fu_li_zhuan_qu">
+                <img src="http://tulingfiles.b0.upaiyun.com/upload/img/%E5%96%9C%E5%8A%9B640962.png" class="logo_image">
+                <div class="content" style="display: table;">
+                  <div class="you_hui_xin_xi_content">
+                    <div style="display: inline-block; max-height: 70px; overflow: hidden;">喜力餐吧|米其林星级推荐餐厅，优惠来袭</div></div>
+                </div>
+              </div>
+              <div class="fu_li_zhuan_qu">
+                <img src="http://tulingfiles.b0.upaiyun.com/upload/img/%E5%A4%A7%E6%88%90%E5%AE%B6585349.jpg" class="logo_image">
+                <div class="content" style="display: table;">
+                  <div class="you_hui_xin_xi_content">
+                    <div style="display: inline-block; max-height: 70px; overflow: hidden;">大成家|机场里的淡淡台南风，饮料小食优惠不断</div></div>
+                </div>
+              </div>
+              <div class="fu_li_zhuan_qu">
+                <img src="http://tulingfiles.b0.upaiyun.com/upload/img/%E5%AD%A3%E8%AF%BA452967.jpg" class="logo_image">
+                <div class="content" style="display: table;">
+                  <div class="you_hui_xin_xi_content">
+                    <div style="display: inline-block; max-height: 70px; overflow: hidden;">季诺|浓浓意式风味，开胃饮品贴心送</div></div>
+                </div>
+              </div>
+              <div class="fu_li_zhuan_qu">
+                <img src="http://tulingfiles.b0.upaiyun.com/upload/img/%E5%BA%B7%E5%B8%88%E5%82%85915816.jpg" class="logo_image">
+                <div class="content" style="display: table;">
+                  <div class="you_hui_xin_xi_content">
+                    <div style="display: inline-block; max-height: 70px; overflow: hidden;">康师傅|满赠VIP待遇，尊享私房诱惑</div></div>
+                </div>
+              </div>
+              <div class="fu_li_zhuan_qu">
+                <img src="http://tulingfiles.b0.upaiyun.com/upload/img/%E5%BA%86%E4%B8%B0%E5%8C%85%E5%AD%90836650.png" class="logo_image">
+                <div class="content" style="display: table;">
+                  <div class="you_hui_xin_xi_content">
+                    <div style="display: inline-block; max-height: 70px; overflow: hidden;">庆丰包子|老北京情怀包子铺，满送开胃饮还打折哦</div></div>
+                </div>
+              </div>
+              <div class="fu_li_zhuan_qu">
+                <img src="http://tulingfiles.b0.upaiyun.com/upload/img/%E7%B4%AB%E6%82%A6%E9%A4%90%E5%8E%85201985.jpg" class="logo_image">
+                <div class="content" style="display: table;">
+                  <div class="you_hui_xin_xi_content">
+                    <div style="display: inline-block; max-height: 70px; overflow: hidden;">紫悦情|中西美味结合，更有给力8折等着你</div></div>
+                </div>
+              </div>
+              <!---->
+<div id='modal-mask' class="modal-mask"><div class="modal-wrapper"><div class="modal-container"><div class="modal-header"><div class="choose_city_header">
+     请选择以下城市
+  </div></div> <div class="modal-body"><div style="height: 305px; border-radius: 0px 0px 5px 5px; background-color: rgb(255, 255, 255);"><div style="margin: 0px 10px; text-align: left;"><div style="height: 100%; overflow: auto;"><div style="display: inline-block; width: 93.3333px; height: 92.5px; margin-top: 40px; text-align: center; position: relative;"><img src="http://tulingfiles.b0.upaiyun.com/upload/img/图1 拷贝副本499418.jpg" style="border-radius: 50px; width: 60px; height: 60px;"> <div style="color: rgb(106, 106, 106); font-family: &quot;PingFangSC Regular&quot;; font-size: 16px; position: absolute; bottom: 0px; width: 100%;">
+            北京
+          </div></div><div style="display: inline-block; width: 93.3333px; height: 92.5px; margin-top: 40px; text-align: center; position: relative;"><img src="http://tulingfiles.b0.upaiyun.com/upload/img/hij919434.jpg" style="border-radius: 50px; width: 60px; height: 60px;"> <div style="color: rgb(106, 106, 106); font-family: &quot;PingFangSC Regular&quot;; font-size: 16px; position: absolute; bottom: 0px; width: 100%;">
+            上海
+          </div></div><div style="display: inline-block; width: 93.3333px; height: 92.5px; margin-top: 40px; text-align: center; position: relative;"><img src="http://tulingfiles.b0.upaiyun.com/upload/img/图2 拷贝副本271009.jpg" style="border-radius: 50px; width: 60px; height: 60px;"> <div style="color: rgb(106, 106, 106); font-family: &quot;PingFangSC Regular&quot;; font-size: 16px; position: absolute; bottom: 0px; width: 100%;">
+            广州
+          </div></div><div style="display: inline-block; width: 93.3333px; height: 92.5px; margin-top: 40px; text-align: center; position: relative;"><img src="http://tulingfiles.b0.upaiyun.com/upload/img/图1副本 2399080.jpg" style="border-radius: 50px; width: 60px; height: 60px;"> <div style="color: rgb(106, 106, 106); font-family: &quot;PingFangSC Regular&quot;; font-size: 16px; position: absolute; bottom: 0px; width: 100%;">
+            深圳
+          </div></div><div style="display: inline-block; width: 93.3333px; height: 92.5px; margin-top: 40px; text-align: center; position: relative;"><img src="http://tulingfiles.b0.upaiyun.com/upload/img/timg988619.jpg" style="border-radius: 50px; width: 60px; height: 60px;"> <div style="color: rgb(106, 106, 106); font-family: &quot;PingFangSC Regular&quot;; font-size: 16px; position: absolute; bottom: 0px; width: 100%;">
+            青岛
+          </div></div><div style="display: inline-block; width: 93.3333px; height: 92.5px; margin-top: 40px; text-align: center; position: relative;"><img src="http://tulingfiles.b0.upaiyun.com/upload/img/%E9%95%BF%E6%B2%99335564.jpg" style="border-radius: 50px; width: 60px; height: 60px;"> <div style="color: rgb(106, 106, 106); font-family: &quot;PingFangSC Regular&quot;; font-size: 16px; position: absolute; bottom: 0px; width: 100%;">
+            长沙
+          </div></div></div></div> <img src="http://siweitech.b0.upaiyun.com/image/shangyunyijia/关闭@2x.png" style="position: relative; width: 40px; top: 54px;"></div></div> <div class="modal-footer"></div></div></div></div>
+              <!----></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,338 @@
+@charset "UTF-8";
+/* 全局声明的css */
+
+div,a,img {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select:none;
+}
+
+textarea, input, button {
+  outline: none;
+  border: none;
+  resize: none;
+}
+
+.divider {
+  height: 10px;
+  clear: both;
+  display: block; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  color: #474747;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+body {
+  background-color: #fbf9fe;
+  font-family: Helvetica,sans-serif;
+  line-height: 1.6; }
+
+.full_height {
+  height: 100%;
+}
+
+.tab_nav {
+  position: absolute;
+  width: 100%;
+  z-index: 999; }
+
+.ckeditor_content {
+  padding: 10px;
+  text-align: left; }
+
+.tab-content-bd {
+  padding-top: 45px;
+  box-sizing: border-box;
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; }
+
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  /*margin-top: 60px */ }
+
+.home_top_category {
+  width: 90%;
+  height: 100px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background: #fff;
+  margin-bottom: 3px; }
+
+.home_top_category_detail {
+  width: 25%;
+  display: inline-block;
+  float: left; }
+
+.home_top_category_detail img {
+  height: 32px;
+  margin-top: 26px;
+  margin-bottom: 5px; }
+
+.home_top_category_detail p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 14px; }
+
+.home_active_message {
+  width: 100%;
+  height: 165px;
+  margin-top: 11px;
+  padding-bottom: 15px;
+  background: #fff; }
+
+.home_active_message .title,
+.home_special_category .title {
+  height: 40px;
+  font-size: 0px;
+  background: #fff;
+  position: relative; }
+
+.home_active_message .title .left,
+.home_special_category .title .left {
+  display: inline-block;
+  line-height: 40px;
+  position: relative;
+  width: 50%;
+  left: 12px;
+  text-align: left; }
+
+.home_active_message .title .left .word,
+.home_special_category .title .left .word {
+  font-size: 16px;
+  line-height: 16px;
+  border-left: 3px solid red;
+  padding-left: 3px;
+  font-weight: bold; }
+
+.home_active_message .title .right,
+.home_special_category .title .right {
+  display: inline-block;
+  line-height: 40px;
+  position: relative;
+  width: 50%;
+  right: 22px;
+  text-align: right; }
+
+.home_active_message .title .right .word,
+.home_special_category .title .right .word {
+  font-size: 12px;
+  line-height: 40px;
+  color: #848484; }
+
+.home_active_message .message {
+  width: 100%;
+  height: 125px; }
+
+.home_active_message .message p {
+  line-height: 25px;
+  font-size: 14px;
+  text-align: left;
+  margin-left: 13px;
+  margin-right: 13px; }
+
+.home_active_message .message p img {
+  height: 14px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  vertical-align: middle; }
+
+.home_special_category {
+  margin-top: 11px;
+  width: 100%;
+  background: #fff; }
+
+.mine_simple_info {
+  width: 100%;
+  height: 89px;
+  background: #fff;
+  position: relative; }
+
+.mine_simple_info .icon {
+  position: absolute;
+  width: 49px;
+  height: 49px;
+  margin-left: 13px;
+  border-radius: 25px;
+  background-image: url("http://pintuanbao.b0.upaiyun.com/image/galleries/btn_vacancy@2x.png");
+  background-position: center center;
+  background-size: 100% 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 0;
+  bottom: 0;
+  left: 0; }
+
+.mine_simple_info .user_name_and_phone {
+  position: relative;
+  margin-left: 81px;
+  margin-right: 25px;
+  height: 89px;
+  line-height: 89px;
+  vertical-align: middle; }
+
+.mine_simple_info .user_name_and_phone .container {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 41px;
+  text-align: left; }
+
+.mine_simple_info .user_name_and_phone .user_name {
+  line-height: 16px;
+  font-size: 16px;
+  color: #474747;
+  overflow: hidden;
+  font-weight: bold;
+  height: 16px; }
+
+.mine_simple_info .user_name_and_phone .phone {
+  height: 14px;
+  margin-top: 11px;
+  line-height: 14px;
+  font-size: 14px;
+  color: #ababab;
+  overflow: hidden; }
+
+.mine_simple_info .arrow {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid #b9b9b9;
+  border-top: 2px solid #b9b9b9;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 13px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transform: rotate(45deg); }
+
+.mine_income_container {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  background: #fff;
+  color: #e72c31;
+  font-size: 16px;
+  font-weight: bold; }
+
+.mine_income_container::before {
+  position: absolute;
+  content: " ";
+  left: 0;
+  top: 0;
+  height: 2px;
+  width: 100%;
+  border-top: 2px solid #ececec; }
+
+.mine_income_container .arrow {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid #e72c31;
+  border-top: 2px solid #e72c31;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 13px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transform: rotate(45deg); }
+
+.mine_income {
+  height: 40px;
+  margin-right: 25px;
+  position: relative; }
+
+.mine_income .income_cell {
+  position: relative;
+  width: 50%;
+  float: left;
+  line-height: 40px;
+  text-align: center; }
+
+.mine_invite_friend {
+  margin-top: 11px;
+  width: 100%;
+  border-top: 1px solid #ff7f82;
+  border-bottom: 1px solid #ff7f82;
+  background: #fff;
+  font-size: 0;
+  position: relative; }
+
+.mine_invite_friend .dividing_line {
+  position: absolute;
+  height: 80%;
+  width: 2px;
+  background: #ff7f82;
+  margin: auto;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0; }
+
+.mine_links {
+  margin-top: 11px; }
+
+.mine_links .couple {
+  width: 100%;
+  background: #fff;
+  font-size: 0;
+  position: relative; }
+
+.mine_links .couple::after {
+  position: absolute;
+  content: " ";
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  border-bottom: 2px solid #ececec; }
+
+.mine_links .couple .dividing_line {
+  position: absolute;
+  height: 80%;
+  width: 2px;
+  background: #ececec;
+  margin: auto;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0; }
+
+/*# sourceMappingURL=pin_tuan_bao.css.map */
+
+#shu_dian p{
+
+  text-align: left;
+}
+
+#shu_dian img{
+  width: 100%;
+}
+
+.html_content img{
+  width: 100% !important;
+}
+
+a:link {color:#333;}    /* 未被访问的链接 */
+a:visited {color:#333;}  /* 已被访问的链接 */
+a:hover {color:#FF00FF;}
+
